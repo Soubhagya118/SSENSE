@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+    <style>
+               *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}body{
+    background-color: #ffff;
+    min-height: 110vh;
+    /* border: 1px solid black; */
+}header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.6s;
+}header>ul{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}header>ul>li>a{
+    /* margin-left: 80px; */
+    font-size: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    /* font-family: sans-serif; */
+    padding: 15px;
+}header >ul li{
+    margin-top: 15px;
+    position: relative;
+}header>#leftul >ul li>a{
+    position: relative;
+}header.sticky{
+    /* padding: 4px 100px; */
+    background-color: #ffff;
+}#ssenselogo{
+    font-size: 50px;
+    margin-left: 45px;
+    margin-right: 220px;
+    font-weight: bold;
+}#leftul>li:nth-child(1)>a{
+    margin-left: 35px;
+}
+/* ===========================css=========================== */
+#cartpart{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}#button{
+    margin-left: 20%;
+}#button>button{
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+/* ================================footer============== */
+footer{
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 100px;
+    height: 200px;
+    color: black;
+}footer>#top{
+    width: 80%;font-weight: lighter;
+    margin: auto;
+    /* border: 1px solid black; */
+    text-align: center;column-gap: 2%;
+    display:flex ;
+    font-size: 1vw;
+}footer>#next{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    margin-top: 40px;
+    color: gray;font-size: 25px;
+    column-gap: 4%;
+}.icon{
+    display: flex;
+    
+}.icon>.fab{
+margin-left: 17px;
+color: black;
+}footer>#top>p>a{
+    color: black;
+    text-decoration: none;
+}
+    
+    </style>
+</head>
+<body>
+    <header>
+        <ul id="leftul">
+            <li><a href="#">MENSWEAR</a></li>
+            <li><a href="product.html">WOMENSWEAR</a></li>
+            <li><a href="product.html">EVERYTHINGELSE</a></li>
+            <li><a href="product.html">SALE</a></li>
+            <li><a href="product.html">SEARCH</a></li>
+            <li><a href="#" id="ssenselogo">SSENSE</a></li>
+            <li><a href="signup.html">SIGN UP</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="wishlist.html">WISHLIST</a></li>
+            <li><a href="cart.html">SHOPPINGBAG</a></li>
+        </ul>
+</header>
+<div id="cartpart"></div>
+<div id="button">
+    <div id="total"></div>
+    <button onclick="payment()">
+        PAY NOW
+    </button>
+</div>
+<footer>
+    <div id="top">
+        <p><a href="#">COUNTRY/REGION: INDIA</a></p>
+        <P><a href="#">NEWSLETTER SIGNUP</a></P>
+        <P><a href="#">CUSTOMER CARE</a></P>
+        <P><a href="#">LOCATION</a></P>
+        <P><a href="#">EDITORIALS ARCHIVE</a></P>
+        <P><a href="#">CAREERS</a></P>
+        <P><a href="#">AFFILIATES</a></P>
+        <P><a href="#">SITEMAP</a></P>
+    </div>
+    <div id="next">
+        <p>@ 2021 ssense.com</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+        <p>Cookies</p>
+        <p>Assesibility</p>
+        <div class="icon">
+           <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+ window.addEventListener("scroll",function(){
+        var header=document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY >0)
+    });
+
+var cartPart=document.getElementById("cartpart");
+
+    var cartItems= JSON.parse(localStorage.getItem("cartItems"));
+    console.log("cartItems:",cartItems);
+
+    showProducts(cartItems);
+
+    function showProducts(product){
+    // document.querySelector(".box4").innerHTML = "";
+    
+    product.map(function (item) {
+      var imageDiv = document.createElement("div");
+      imageDiv.setAttribute("id", "all");
+
+      var img = document.createElement("img");
+      img.setAttribute("src", item.image_url);
+      img.setAttribute("id", "pic");
+
+      var icon = document.createElement("div");
+    //   icon.innerHTML = '<a href="Favourite.html"><i class="far fa-heart fa-lg"> </i></a>';
+    icon.innerHTML ='<i class="far fa-heart fa-lg"><a href="Favourite.html"> </i>';
+      icon.setAttribute("id", "icn");
+    
+
+      var clr = document.createElement("div");
+      clr.setAttribute("id", "clr");
+
+      var marun = document.createElement("div");
+      marun.setAttribute("id", "mclr");
+
+      var orange = document.createElement("div");
+      orange.setAttribute("id", "oclr");
+
+      var cream = document.createElement("div");
+      cream.setAttribute("id", "cclr");
+
+      var ctext = document.createElement("div");
+      ctext.setAttribute("id", "ctxt");
+      ctext.textContent = "+4";
+      
+     var h1= document.createElement("p");
+     h1.setAttribute("id","ssensewrk")
+     h1.textContent="SSENSE WORKS";
+
+      var h3 = document.createElement("p");
+      h3.textContent = item.name;
+      h3.setAttribute("id", "imgname");
+
+      var h2 = document.createElement("p");
+      h2.textContent = item.price;
+      h2.setAttribute("id", "strike");
+
+      var h4 = document.createElement("p");
+      h4.textContent = item.price1;
+      h4.setAttribute("id", "Nstrike");
+
+      var h5 = document.createElement("p");
+      h5.textContent = item.colour;
+      h5.setAttribute("id", "color");
+
+      var h6 = document.createElement("p");
+      h6.textContent = item.Size;
+      h6.setAttribute("id", "size");
+
+    //   var btn = document.createElement("button");
+    //   btn.textContent = "Add To Bag";
+    //   btn.setAttribute("id", "hbtn");
+    //   btn.addEventListener("click",function() {
+    //       addToCart(item);
+    //   });
+
+      imageDiv.append(img,h1,h3,h2,h4,h5,h6,clr);
+      clr.append(marun,orange,cream,ctext);
+    //   d.append(imageDiv)
+    //   mainDiv.append(imageDiv);
+
+    cartPart.append(imageDiv);
+    });
+  };
+
+var total = cartItems.reduce(function(acc,cv){
+   return acc+Number(cv.price1); 
+}, 0);
+console.log(total);
+document.querySelector("#total").textContent=total;
+function payment(){
+    window.location.href="payment.html";
+}
+</script>

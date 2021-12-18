@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=<device-width>, initial-scale=1.0"> -->
+    <title>Document</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}body{
+    background-color: #ffff;
+    min-height: 100vh;
+    /* border: 1px solid black; */
+}header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.6s;
+}header>ul{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}header>ul>li>a{
+    /* margin-left: 80px; */
+    font-size: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    /* font-family: sans-serif; */
+    padding: 15px;
+}header >ul li{
+    margin-top: 15px;
+    position: relative;
+}header>#leftul >ul li>a{
+    position: relative;
+}header.sticky{
+    /* padding: 4px 100px; */
+    background-color: #ffff;
+}#ssenselogo{
+    font-size: 50px;
+    margin-left: 45px;
+    margin-right: 220px;
+    font-weight: bold;
+}#leftul>li:nth-child(1)>a{
+    margin-left: 35px;
+}
+/* =============================================================end of header======================== */
+.container{
+            /* border:1px solid red; */
+            height:auto;
+            width:90%;
+            margin: auto;
+           margin-top: 0%;
+}.box2{
+           
+            height:140px;
+            width:100%;
+}#arrow{
+          
+            display: inline-block;
+            font-size: 13px;
+            color: #2e2e4b;
+            margin-left: 20px;
+            font-family:'Times New Roman', Times, serif;
+}#arrownext{
+            
+            display: inline-block;
+            font-size:13px;
+            color: #2e2e4b;
+            margin-left: 20px;
+} #heading{
+            text-align: center;
+            font-size: 60px;
+            font-weight: bolder;
+            color: black;
+            width:49vw;
+            margin: 0 auto;
+            font:Arial,sans-serif;
+}.box3{
+            /* border:1px solid red; */
+            height:auto;
+            width:20%;
+            float:left;
+            /* display: inline-block;
+            vertical-align: top; 
+            float:right; */
+}.box4{
+            /* border:1px solid red; */
+            height:auto;
+            width:79%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            float: right;
+            grid-gap:0px ;
+        
+} #pic{
+            width:350px;
+            height:500px;
+            
+           
+}#pic:hover{
+            width: 320px;
+            height: 500px;
+
+}#all{ 
+            width:280px;
+            height:750px;
+            border: 1px solid white;
+            margin-left: 5px;
+            
+}p{
+            color: red;
+            font-size: 12px;
+            font-weight: bold;
+}#imgname{
+            font-size: 20px;
+            color:black;
+            font-family: sans-serif;
+            font-weight: lighter;
+}#strike{
+            display: inline-block;
+            color:black;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration:line-through;
+}#Nstrike{
+            display: inline-block;
+            color:red;
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 30px;
+}#mclr{
+            border: 1px solid red;
+            height:20px;
+            width:20px;
+            border-radius: 50px;
+            background-color: maroon;
+            display: inline-block;
+}#oclr{
+            border: 1px solid red;
+            height:20px;
+            width:20px;
+            border-radius: 50px;
+            background-color: orangered;
+            display: inline-block;
+            margin-left: 20px;
+}#cclr{
+            border: 1px solid red;
+            height:20px;
+            width:20px;
+            border-radius: 50px;
+            background-color: wheat;
+            display: inline-block;
+            margin-left: 20px;
+}#ctxt{
+            border: 1px solid red;
+            height:20px;
+            width:20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: top;
+}#all {
+           position: relative;
+           z-index: 1;
+} #all:hover #hbtn{
+           display:block;
+}#hbtn{
+            position: absolute;
+            z-index: 2;
+            top: 85px;
+            display: none;
+            left: 35px;
+            background-color: black;
+            color:white;
+            height:50px;
+            width:210px;
+            margin-top:95%;
+}#color{
+            color: grey;
+            font-size: 15px;
+}#size{
+            color: black;
+            font-size: 20px;
+}#icn{
+            position:absolute;
+            margin-top: 5%;
+            margin-left: 90%;
+            width: 40px !important;
+            height: 40px !important;
+}.fa-heart:hover{
+            color: red;
+}.Fsize{
+            height: 300px;
+            width: 100%;
+            border: 1px solid yellow;
+            
+}.Fcolor{
+            height: 300px;
+            width: 100%;
+            border: 1px solid green;
+}.Fprice{
+            height: 250px;
+            width: 100%;
+            /* border: 1px solid blue; */
+            text-align: center;
+            font-size: 25px;
+            text-decoration: underline;
+            font-family: fantasy;
+            margin-top: 10px;
+}select{
+           height: 60px;
+           width: 230px;
+           margin-top: 20px;
+           font-size: 20px;
+           text-align: center;
+           color: white;
+           background-color: black;
+           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           border-radius: 40px;
+           /* font-style: italic; */
+           font-family: cursive;
+}#ssensewrk{
+        color: black;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: lighter;
+} #cartbutton>button{
+        background-color: black;
+        color: white;
+        margin-top: 70px;
+        width: 100px;
+        height: 50px;
+     }
+        
+  /* ================================footer=========================== */
+    </style>
+</head>
+<body> 
+    <header>
+        <ul id="leftul">
+            <li><a href="#">MENSWEAR</a></li>
+            <li><a href="product.html">WOMENSWEAR</a></li>
+            <li><a href="navbar.html">EVERYTHINGELSE</a></li>
+            <li><a href="navbar.html">SALE</a></li>
+            <li><a href="#">SEARCH</a></li>
+            <li><a href="#" id="ssenselogo">SSENSE</a></li>
+            <li><a href="signup.html">SIGN UP</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="wishlist.html">WISHLIST</a></li>
+            <li><a href="cart.html">SHOPPINGBAG</a></li>
+        </ul>
+    </header>
+<div id="cartbutton">
+    <button>Go to cart</button>
+</div>
+
+
+    </body>
+</html>
+<script>
+    window.addEventListener("scroll",function(){
+        var header=document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY >0)
+    });
+
+
+  
+     var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+//-------------------------------------Filter Price-------------------------------//
+    function handlePriceSort() {
+        var selected = document.getElementById("sortByPrice").value;
+        console.log("selected: ",selected);
+        if (selected=="low"){
+           product = product.sort(function (a,b) {
+               return a.price1-b.price1;
+           });
+        }
+        if (selected=="high"){
+           product = product.sort(function (a,b) {
+               return b.price1 - a.price1;
+           });
+        }
+        console.log(product);
+        showProducts(product);
+    }
+
+//--------------------------------------Filter Size------------------------------------
+
+function handleSizeSort() {
+        var selected = document.getElementById("sortBySize").value;
+        if (selected=="S"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
+           });
+        }
+        if (selected=="M"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? -1 : b.name > b.name ? 1 : 0;
+           });
+        }
+
+        if (selected=="L"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
+           });
+        }
+        if (selected=="XL"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? -1 : b.name > b.name ? 1 : 0;
+           });
+        }
+        
+        console.log(product);
+        showProducts(product);
+    }
+
+    //----------------------------------------------Filter Color--------------------------------
+    function handlecolorSort() {
+        var selected = document.getElementById("sortBycolor").value;
+        // console.log("selected: ",selected);
+        if (selected=="cream"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
+           });
+        }
+        if (selected=="pink"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? -1 : b.name > a.name ? 1 : 0;
+           });
+        }
+        console.log(product);
+        showProducts(product);
+    }
+    //-----------------------------------------------------------------------------------//
+    var product = [
+    {
+        image_url: "https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/212404F064005_1/versace-black-and-green-faux-fur-coat.jpg",
+        
+        name:"SSENSE Exclusive Your Friends In New York Commemorative T-Shirt",
+        price: "USD 3,100.00",
+        price1: 6100,
+        colour: "Color - Maroon",
+        Size: "S",
+
+    },
+    {
+        image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/212404F064004_1/versace-black-and-green-monogram-belted-leather-jacket.jpg",
+       
+        name: "Sierra Cardign Set-Taupe",
+        price: "USD $44.99",
+        price1: 5600,
+        colour: "Color - Brown",
+        Size: "L",
+    },
+    {
+        image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/212404F097005_1/versace-black-baroque-print-hoodie.jpg",
+       
+        name: "SSENSE Exclusive Your Friends In New York Commemorative Hoodie",
+        price: "USD $29.99",
+        price1: 7900,
+        colour: "Color - White",
+        Size: "S",
+    },
+
+    {
+        image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/212404F097020_1/versace-black-logo-print-hoodie.jpg",
+       
+        name: "SSENSE Exclusive Tan Pullover Hoodie",
+        price: "USD $44.99",
+        price1: 8500,
+        colour: "Color - Dark Brown",
+        Size: "L",
+    },
+    
+    
+    {
+       image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221111F061013_1/moncler-pink-cashmere-blend-jacket.jpg",
+        
+        name: "SSENSE Exclusive Your Friends In New York Commemorative Hoodie" ,
+        price: "USD $34.99",
+        price1: 1100,
+        colour: "Color - Nude",
+        Size: "XL",
+    },
+
+    {
+       image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221169F109003_1/bode-multicolor-gloucester-crochet-overshirt.jpg",
+       
+       
+        name: "Black Sheer Varegaited Rib Mini Dress" ,
+        price: "USD $44.99",
+        price1:  7800,
+        colour: "Color - Pink",
+        Size: "XL",
+    },
+
+    {
+       image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221111F061018_1/moncler-black-down-ments-short-parka.jpg",
+        
+        name: "Get Your Own Balloon Sleeve Dress" ,
+        price: "USD $39.99",
+        price1: 2300,
+        colour: "Color - lightCream",
+        Size: "XL",
+
+    },
+    {
+    image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221111F014007_1/moncler-black-faux-fur-pom-pom-beanie.jpg",
+       
+        name: "Warms Your Heart Sweater Duster - Taupe" ,
+        price: "USD $44.99",
+        price1: 9600,
+        colour: "Color - cream",
+        Size: "M",
+    },
+    {
+        image_url: "https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/212404F064005_1/versace-black-and-green-faux-fur-coat.jpg",
+        
+        name:"SSENSE Exclusive Your Friends In New York Commemorative T-Shirt",
+        price: "USD 3,100.00",
+        price1: 6100,
+        colour: "Color - Maroon",
+        Size: "S",
+
+    },
+    {
+        image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/212404F064004_1/versace-black-and-green-monogram-belted-leather-jacket.jpg",
+       
+        name: "Sierra Cardign Set-Taupe",
+        price: "USD $44.99",
+        price1: 5600,
+        colour: "Color - Brown",
+        Size: "L",
+    },
+    {
+        image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/212404F097005_1/versace-black-baroque-print-hoodie.jpg",
+       
+        name: "SSENSE Exclusive Your Friends In New York Commemorative Hoodie",
+        price: "USD $29.99",
+        price1: 7900,
+        colour: "Color - White",
+        Size: "S",
+    },
+
+    {
+        image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/212404F097020_1/versace-black-logo-print-hoodie.jpg",
+       
+        name: "SSENSE Exclusive Tan Pullover Hoodie",
+        price: "USD $44.99",
+        price1: 8500,
+        colour: "Color - Dark Brown",
+        Size: "L",
+    },
+    
+    {
+       image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221169F109003_1/bode-multicolor-gloucester-crochet-overshirt.jpg",
+       
+       
+        name: "Black Sheer Varegaited Rib Mini Dress" ,
+        price: "USD $44.99",
+        price1:  7800,
+        colour: "Color - Pink",
+        Size: "XL",
+    },
+
+    {
+       image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221111F061018_1/moncler-black-down-ments-short-parka.jpg",
+        
+        name: "Get Your Own Balloon Sleeve Dress" ,
+        price: "USD $39.99",
+        price1: 2300,
+        colour: "Color - lightCream",
+        Size: "XL",
+
+    },
+    {
+    image_url:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221111F014007_1/moncler-black-faux-fur-pom-pom-beanie.jpg",
+       
+        name: "Warms Your Heart Sweater Duster - Taupe" ,
+        price: "USD $44.99",
+        price1: 9600,
+        colour: "Color - cream",
+        Size: "M",
+    },
+    {
+        image_url: "https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/212404F064005_1/versace-black-and-green-faux-fur-coat.jpg",
+        
+        name:"SSENSE Exclusive Your Friends In New York Commemorative T-Shirt",
+        price: "USD 3,100.00",
+        price1: 6100,
+        colour: "Color - Maroon",
+        Size: "S",
+
+    },
+    
+    ];
+
+      
+
+    
+   
+    
+    
+
+  var body = document.querySelector("body");
+  var mainDiv = document.createElement("div");
+  mainDiv.setAttribute("class", "container");
+
+  localStorage.setItem("setD",JSON.stringify(product));
+  var myd = JSON.parse(localStorage.getItem("setD"));
+  console.log("myd:", myd);
+
+   var cart = JSON.parse(localStorage.getItem("setD")) || [];
+
+ 
+  var a = document.createElement("div");
+  a.setAttribute("class", "box1");
+
+  var b = document.createElement("div");
+  b.setAttribute("class", "box2");
+
+
+//-----------------------------------------FILTER BOX---------------------------------------------------//
+  var c = document.createElement("div");
+  c.setAttribute("class", "box3");
+  
+  
+  var e = document.createElement("div");
+  e.textContent="Filter Price";
+  e.setAttribute("class", "Fprice");
+
+  var fs = document.createElement("div");
+  fs.setAttribute("class", "fsprice");
+  fs.innerHTML = '<select id="sortByPrice" onchange="handlePriceSort()"> <option value="">Sort By Price</option> <option value="low">low to high</option> <option value="high">high to low</option> </select> ';
+  
+  var f = document.createElement("div");
+  f.textContent="Filter Size";
+  f.setAttribute("class", "Fprice");
+
+  var fsz = document.createElement("div");
+  fsz.setAttribute("class", "fsprice");
+  fsz.innerHTML = '<select id="sortBySize" onchange="handleSizeSort()"> <option value="">Sort BY Size</option> <option value="S">S</option>  <option value="M">M</option> <option value="L">L</option>  <option value="XL">XL</option>  </select>';
+
+  var g = document.createElement("div");
+  g.textContent="Filter Color";
+  g.setAttribute("class", "Fprice");
+
+  var fc = document.createElement("div");
+  fc.setAttribute("class", "fsprice");
+  fc.innerHTML = '<select id="sortByColor" onchange="handleColorSort()"> <option value="">Sort BY Color</option> <option value="pink">Pink</option>  <option value="cream">Cream</option> <option value="white">White</option>  <option value="maroon">Maroon</option>  <option value="brown">Brown</option>  </select>';
+
+//--------------------------------------------------------GRID---------------------------------------------------------//
+  var d = document.createElement("div");
+  d.setAttribute("class", "box4");
+
+
+
+  body.append(mainDiv);
+  mainDiv.append(a,b);
+  mainDiv.append(c,d);
+
+   c.append(e,f,g);
+   e.append(fs);
+   f.append(fsz);
+   g.append(fc);
+   showProducts(product);
+
+  function showProducts(product){
+    document.querySelector(".box4").innerHTML = "";
+    
+    product.map(function (item) {
+      var imageDiv = document.createElement("div");
+      imageDiv.setAttribute("id", "all");
+
+      var img = document.createElement("img");
+      img.setAttribute("src", item.image_url);
+      img.setAttribute("id", "pic");
+
+      var icon = document.createElement("div");
+    //   icon.innerHTML = '<a href="Favourite.html"><i class="far fa-heart fa-lg"> </i></a>';
+    icon.innerHTML ='<i class="far fa-heart fa-lg"><a href="Favourite.html"> </i>';
+      icon.setAttribute("id", "icn");
+    
+
+      var clr = document.createElement("div");
+      clr.setAttribute("id", "clr");
+
+      var marun = document.createElement("div");
+      marun.setAttribute("id", "mclr");
+
+      var orange = document.createElement("div");
+      orange.setAttribute("id", "oclr");
+
+      var cream = document.createElement("div");
+      cream.setAttribute("id", "cclr");
+
+      var ctext = document.createElement("div");
+      ctext.setAttribute("id", "ctxt");
+      ctext.textContent = "+4";
+      
+     var h1= document.createElement("p");
+     h1.setAttribute("id","ssensewrk")
+     h1.textContent="SSENSE WORKS";
+
+      var h3 = document.createElement("p");
+      h3.textContent = item.name;
+      h3.setAttribute("id", "imgname");
+
+      var h2 = document.createElement("p");
+      h2.textContent = item.price;
+      h2.setAttribute("id", "strike");
+
+      var h4 = document.createElement("p");
+      h4.textContent = item.price1;
+      h4.setAttribute("id", "Nstrike");
+
+      var h5 = document.createElement("p");
+      h5.textContent = item.colour;
+      h5.setAttribute("id", "color");
+
+      var h6 = document.createElement("p");
+      h6.textContent = item.Size;
+      h6.setAttribute("id", "size");
+
+      var btn = document.createElement("button");
+      btn.textContent = "Add To Bag";
+      btn.setAttribute("id", "hbtn");
+      btn.addEventListener("click",function() {
+          addToCart(item);
+      });
+
+      imageDiv.append(icon,img,btn,h1,h3,h2,h4,h5,h6,clr);
+      clr.append(marun,orange,cream,ctext);
+      d.append(imageDiv)
+    //   mainDiv.append(imageDiv);
+    });
+  };
+
+  function addToCart(item) {
+        console.log(item);
+        cart.push(item);
+        localStorage.setItem("cartItems",JSON.stringify(cart));
+        }
+    
+    document.getElementById("hbtn").addEventListener("click",function(){
+        window.location.href = "";
+    });
+     
+   
+    document.getElementById("icn").addEventListener("click",myFun);
+    function myFun() {
+        document.getElementById("icn").style.color="red";
+        window.location.href="wishlist.html";
+    }
+
+    document.getElementById("cartbutton").addEventListener("click",function(){
+        window.location.href="cart.html";
+    })
+</script>

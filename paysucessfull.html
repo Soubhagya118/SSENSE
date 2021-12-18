@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+<style>
+         *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}body{
+    background-color: #ffff;
+    min-height: 110vh;
+    /* border: 1px solid black; */
+}header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.6s;
+}header>ul{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}header>ul>li>a{
+    /* margin-left: 80px; */
+    font-size: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    /* font-family: sans-serif; */
+    padding: 15px;
+}header >ul li{
+    margin-top: 15px;
+    position: relative;
+}header>#leftul >ul li>a{
+    position: relative;
+}header.sticky{
+    /* padding: 4px 100px; */
+    background-color: #ffff;
+}#ssenselogo{
+    font-size: 50px;
+    margin-left: 45px;
+    margin-right: 220px;
+    font-weight: bold;
+}#leftul>li:nth-child(1)>a{
+    margin-left: 35px;
+}
+footer{
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 280px;
+    height: 200px;
+    color: black;
+}footer>#top{
+    width: 80%;font-weight: lighter;
+    margin: auto;
+    /* border: 1px solid black; */
+    text-align: center;column-gap: 2%;
+    display:flex ;
+    font-size: 1vw;
+}footer>#next{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    margin-top: 40px;
+    color: gray;font-size: 25px;
+    column-gap: 4%;
+}.icon{
+    display: flex;
+    
+}.icon>.fab{
+margin-left: 17px;
+color: black;
+}footer>#top>p>a{
+    color: black;
+    text-decoration: none;
+}
+#payment{
+    width: 20%;
+    height: 600px;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    /* padding: 20px; */
+}#payment>img{
+    width: 90%;
+}#payment>h2{
+    font-size: 40px;
+}#payment>p{
+    font-size: 30px;
+}
+</style>
+</head>
+<body>
+<header>
+        <ul id="leftul">
+            <li><a href="#">MENSWEAR</a></li>
+            <li><a href="product.html">WOMENSWEAR</a></li>
+            <li><a href="navbar.html">EVERYTHINGELSE</a></li>
+            <li><a href="product.html">SALE</a></li>
+            <li><a href="#">SEARCH</a></li>
+            <li><a href="#" id="ssenselogo">SSENSE</a></li>
+            <li><a href="signup.html">SIGN UP</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="wishlist.html">WISHLIST</a></li>
+            <li><a href="cart.html">SHOPPINGBAG</a></li>
+        </ul>
+</header>
+<div id="payment">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmfS1oxxuVEVrXahVK2N4nLr4rlpoKbUFGA&usqp=CAU">
+    <h2>Success!</h2>
+    <p>Your request has been processed successfully</p>
+</div>
+<footer>
+    <div id="top">
+        <p><a href="#">COUNTRY/REGION: INDIA</a></p>
+        <P><a href="#">NEWSLETTER SIGNUP</a></P>
+        <P><a href="#">CUSTOMER CARE</a></P>
+        <P><a href="#">LOCATION</a></P>
+        <P><a href="#">EDITORIALS ARCHIVE</a></P>
+        <P><a href="#">CAREERS</a></P>
+        <P><a href="#">AFFILIATES</a></P>
+        <P><a href="#">SITEMAP</a></P>
+    </div>
+    <div id="next">
+        <p>@ 2021 ssense.com</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+        <p>Cookies</p>
+        <p>Assesibility</p>
+        <div class="icon">
+           <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+     window.addEventListener("scroll",function(){
+        var header=document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY >0)
+    });
+</script>
